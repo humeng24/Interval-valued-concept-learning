@@ -18,16 +18,23 @@ attr.upper = [2.3 0.8 3.2 5.2];
 %% objects
 objects = [2 4];
 %% process
+%% O-IvCL
+granules = concept2obj(data, objects);
+display_granule(granules);
+%% IvA-IvCL
+granules = concept2attr(data, attr);
+display_granule(granules);
+
 
 %% --the first way
 stack = concept_case1(data, objects, attr);
 display_granule(stack);
-granles = concept_case3(stack, data);
-display_granule(granles);
+granules = concept_case3(stack, data);
+display_granule(granules);
 %% --the second way
 stack = concept_case2(data, objects, attr);
 display_granule(stack);
-granles = concept_case4(stack, data);
-display_granule(granles);
+granules = concept_case4(stack, data);
+display_granule(granules);
 end
 
